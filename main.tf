@@ -1,7 +1,7 @@
 provider "google" {
   project = var.project
-  region  = var.region
-  zone    = var.zone
+  region  = "us-east1"
+  zone    = "us-east1-b"
 }
 
 resource "google_compute_instance" "vm_instance" {
@@ -19,4 +19,10 @@ resource "google_compute_instance" "vm_instance" {
     access_config {
     }
   }
+}
+
+resource "google_storage_bucket" "storage_bucket" {
+  name                        = "terraform-storage"
+  location                    = "US"
+  uniform_bucket_level_access = true
 }
