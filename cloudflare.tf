@@ -7,7 +7,7 @@ resource "cloudflare_record" "mail" {
   name    = "mail"
   value   = "79.170.40.164"
   type    = "A"
-  ttl     = 3600
+  ttl     = 1
   proxied = false
 }
 
@@ -16,7 +16,7 @@ resource "cloudflare_record" "nextcloud" {
   name    = "nextcloud"
   value   = "86.20.227.202"
   type    = "A"
-  ttl     = 3600
+  ttl     = 1
   proxied = false
 }
 
@@ -25,7 +25,7 @@ resource "cloudflare_record" "cname_wildcard" {
   name    = "*"
   value   = "gigasproule.github.io"
   type    = "CNAME"
-  ttl     = 3600
+  ttl     = 1
   proxied = false
 }
 
@@ -34,7 +34,7 @@ resource "cloudflare_record" "cname_benjaminsproule_com" {
   name    = "benjaminsproule.com"
   value   = "gigasproule.github.io"
   type    = "CNAME"
-  ttl     = 3600
+  ttl     = 1
   proxied = false
 }
 
@@ -43,7 +43,7 @@ resource "cloudflare_record" "blog" {
   name    = "blog"
   value   = "gigasproule.github.io"
   type    = "CNAME"
-  ttl     = 3600
+  ttl     = 1
   proxied = false
 }
 
