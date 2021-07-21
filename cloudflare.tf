@@ -84,20 +84,6 @@ resource "cloudflare_record" "_imaps_tcp" {
   proxied = false
 }
 
-resource "cloudflare_record" "_imap_tcp" {
-  zone_id = var.cloudflare_zone_id
-  name    = "_imap._tcp.benjaminsproule.com"
-  type    = "SRV"
-  data = {
-    name     = "benjaminsproule.com"
-    priority = 0
-    proto    = "_tcp"
-    service  = "_imap"
-  }
-  ttl     = 1
-  proxied = false
-}
-
 resource "cloudflare_record" "_pop3s_tcp" {
   zone_id = var.cloudflare_zone_id
   name    = "_imap._tcp.benjaminsproule.com"
@@ -110,20 +96,6 @@ resource "cloudflare_record" "_pop3s_tcp" {
     service  = "_pop3s"
     target   = "benjaminsproule.com"
     weight   = 10
-  }
-  ttl     = 1
-  proxied = false
-}
-
-resource "cloudflare_record" "_pop3_tcp" {
-  zone_id = var.cloudflare_zone_id
-  name    = "_imap._tcp.benjaminsproule.com"
-  type    = "SRV"
-  data = {
-    name     = "benjaminsproule.com"
-    priority = 0
-    proto    = "_tcp"
-    service  = "_pop3"
   }
   ttl     = 1
   proxied = false
